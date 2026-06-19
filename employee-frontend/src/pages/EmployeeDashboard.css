@@ -1,0 +1,342 @@
+/* ==========================================================================
+   Employee Dashboard Module - Standalone Stylesheet
+   ========================================================================== */
+
+.employee-dashboard-wrapper {
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --panel-bg: #ffffff;
+  --primary: #4f46e5; /* Modern Indigo Accent */
+  --primary-hover: #4338ca;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --text-main: #0f172a; /* Slate Dark Main */
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-md:
+    0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --radius: 14px;
+
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.employee-dashboard-wrapper div,
+.employee-dashboard-wrapper input,
+.employee-dashboard-wrapper textarea,
+.employee-dashboard-wrapper button {
+  box-sizing: border-box;
+}
+
+/* --- Clean Modern Header Topbar --- */
+.employee-dashboard-wrapper .navbar {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
+
+.employee-dashboard-wrapper .navbar .brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.employee-dashboard-wrapper .logout-btn {
+  background: var(--danger);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.employee-dashboard-wrapper .logout-btn:hover {
+  background: var(--danger-hover);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* --- Core Layout Containers --- */
+.employee-dashboard-wrapper .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.employee-dashboard-wrapper .dashboard-header {
+  margin-bottom: 32px;
+}
+
+.employee-dashboard-wrapper .dashboard-header h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.employee-dashboard-wrapper .role-tag {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.employee-dashboard-wrapper .role-tag span {
+  background: #e2e8f0;
+  color: #334155;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* --- Dashboard Responsive Grid Setup --- */
+.employee-dashboard-wrapper .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 32px;
+}
+
+/* --- Card Architectures --- */
+.employee-dashboard-wrapper .card {
+  background: var(--panel-bg);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.employee-dashboard-wrapper .card h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.employee-dashboard-wrapper .card h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin: 24px 0 14px 0;
+}
+
+/* --- Forms Framework Input Elements --- */
+.employee-dashboard-wrapper .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-dashboard-wrapper .card input,
+.employee-dashboard-wrapper .card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  outline: none;
+  background-color: #ffffff;
+  color: var(--text-main);
+  font-family: inherit;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.employee-dashboard-wrapper .card input:focus,
+.employee-dashboard-wrapper .card textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* Special Dual Columns Date Inputs */
+.employee-dashboard-wrapper .date-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.employee-dashboard-wrapper .date-input-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.employee-dashboard-wrapper .date-input-wrapper label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.employee-dashboard-wrapper .date-input-wrapper input {
+  margin-bottom: 0;
+}
+
+/* Form Action Buttons */
+.employee-dashboard-wrapper .primary-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.employee-dashboard-wrapper .primary-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+/* Custom Checkbox Frame wrapper */
+.employee-dashboard-wrapper .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 18px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.employee-dashboard-wrapper .checkbox-container input {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.employee-dashboard-wrapper .divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 28px 0 12px 0;
+}
+
+/* --- Historical UI Lists Presentation --- */
+.employee-dashboard-wrapper .data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.employee-dashboard-wrapper .data-list li {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.employee-dashboard-wrapper .list-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.employee-dashboard-wrapper .list-main strong {
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.employee-dashboard-wrapper .list-main small {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Component Utilities Inside Data Records */
+.employee-dashboard-wrapper .halfday-tag {
+  font-size: 0.75rem;
+  background: #fef3c7;
+  color: #b45309;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+  width: max-content;
+}
+
+.employee-dashboard-wrapper .category-badge {
+  font-size: 0.75rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  width: max-content;
+}
+
+.employee-dashboard-wrapper .details-text {
+  font-size: 0.85rem;
+  color: #475569;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+}
+
+.employee-dashboard-wrapper .empty-row {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 24px 0;
+}
+
+/* --- Badges System Config --- */
+.employee-dashboard-wrapper .status-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.employee-dashboard-wrapper .badge-pending {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.employee-dashboard-wrapper .badge-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* --- Breakpoints Adaptive Architecture --- */
+@media (max-width: 992px) {
+  .employee-dashboard-wrapper .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .employee-dashboard-wrapper .navbar {
+    padding: 16px 20px;
+  }
+  .employee-dashboard-wrapper .container {
+    padding: 24px 16px;
+  }
+  .employee-dashboard-wrapper .date-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

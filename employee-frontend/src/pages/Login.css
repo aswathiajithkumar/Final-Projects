@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Login Portal Module - Standalone Stylesheet
+   ========================================================================== */
+
+.login-panel-wrapper {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+  --panel-bg: #ffffff;
+  --primary: #4f46e5; /* Matching Workspace Indigo */
+  --primary-hover: #4338ca;
+  --text-main: #0f172a; /* Slate Dark Base */
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --error-bg: #fef2f2;
+  --error-text: #991b1b;
+  --shadow-lg:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --radius: 16px;
+
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-panel-wrapper div,
+.login-panel-wrapper input,
+.login-panel-wrapper form,
+.login-panel-wrapper button {
+  box-sizing: border-box;
+}
+
+/* --- Topbar Branding Element --- */
+.login-panel-wrapper .navbar {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.login-panel-wrapper .navbar .brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.5px;
+}
+
+/* --- Centered Target Grid Workspace --- */
+.login-panel-wrapper .login-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-panel-wrapper .login-card {
+  background: var(--panel-bg);
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.login-panel-wrapper .login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-panel-wrapper .login-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.login-panel-wrapper .login-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* --- Field Block Implementations --- */
+.login-panel-wrapper .login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-panel-wrapper .field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-panel-wrapper .field-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-panel-wrapper .field-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  background-color: #f8fafc;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.login-panel-wrapper .field-group input:focus {
+  background-color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* --- Customized Segmented Selection Chips --- */
+.login-panel-wrapper .role-selector-zone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.login-panel-wrapper .segmented-control {
+  display: flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.login-panel-wrapper .segment-item {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.login-panel-wrapper .segment-item input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.login-panel-wrapper .segment-item span {
+  display: block;
+  padding: 8px 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: 7px;
+  transition: all 0.2s ease;
+}
+
+.login-panel-wrapper .segment-item:hover span {
+  color: #1e293b;
+}
+
+/* Activated Selectors states */
+.login-panel-wrapper .segment-item.active span {
+  background: #ffffff;
+  color: var(--primary);
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Interaction Buttons --- */
+.login-panel-wrapper .login-action-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.login-panel-wrapper .login-action-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.login-panel-wrapper .login-action-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- Inline Alert Banner --- */
+.login-panel-wrapper .error-banner {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+/* --- Minimal Mobile Optimization Viewports --- */
+@media (max-width: 480px) {
+  .login-panel-wrapper .navbar {
+    padding: 16px 20px;
+  }
+  .login-panel-wrapper .login-card {
+    padding: 28px 20px;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  .login-panel-wrapper .field-group input {
+    background-color: #ffffff; /* Contrast fix for white screens */
+  }
+}

@@ -1,0 +1,378 @@
+/* ==========================================================================
+   Admin Dashboard Module - Standalone Stylesheet
+   ========================================================================== */
+
+.admin-dashboard-wrapper {
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --panel-bg: #ffffff;
+  --primary: #4f46e5;         /* Workspace Indigo Accent */
+  --primary-hover: #4338ca;
+  --success: #10b981;
+  --success-hover: #059669;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --text-main: #0f172a;       /* Slate Dark Main Text */
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --radius: 14px;
+
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.admin-dashboard-wrapper div,
+.admin-dashboard-wrapper input,
+.admin-dashboard-wrapper button,
+.admin-dashboard-wrapper ul,
+.admin-dashboard-wrapper li {
+  box-sizing: border-box;
+}
+
+/* --- Clean Global Top Nav --- */
+.admin-dashboard-wrapper .navbar {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
+
+.admin-dashboard-wrapper .navbar .brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.admin-dashboard-wrapper .logout-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-dashboard-wrapper .logout-btn:hover {
+  background: var(--danger-hover);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* --- Core Structure Grid Layouts --- */
+.admin-dashboard-wrapper .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.admin-dashboard-wrapper .dashboard-header {
+  margin-bottom: 32px;
+}
+
+.admin-dashboard-wrapper .dashboard-header h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.admin-dashboard-wrapper .dashboard-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.admin-dashboard-wrapper .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+}
+
+/* Layout Grid Column Span Adapters */
+@media (min-width: 992px) {
+  .admin-dashboard-wrapper .full-width {
+    grid-column: span 2;
+  }
+}
+
+/* --- Components: Card System --- */
+.admin-dashboard-wrapper .card {
+  background: var(--panel-bg);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-dashboard-wrapper .card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.admin-dashboard-wrapper .card h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin: 0 0 14px 0;
+}
+
+/* HR Management Structural Card Alignment Fix */
+.admin-dashboard-wrapper .hr-hub-card {
+  justify-content: space-between;
+}
+
+.admin-dashboard-wrapper .hr-hub-content {
+  margin-bottom: 24px;
+}
+
+/* --- Form Input Fields Elements --- */
+.admin-dashboard-wrapper .action-form-group {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-dashboard-wrapper .card input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  background-color: #ffffff;
+  color: var(--text-main);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.admin-dashboard-wrapper .card input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.admin-dashboard-wrapper .divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 24px 0 20px 0;
+}
+
+/* --- Buttons Layout Blocks --- */
+.admin-dashboard-wrapper .primary-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.admin-dashboard-wrapper .primary-btn:hover {
+  background: var(--primary-hover);
+}
+
+.admin-dashboard-wrapper .navigation-action-btn {
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-dashboard-wrapper .navigation-action-btn:hover {
+  background: #1e293b;
+}
+
+.admin-dashboard-wrapper .approve-action-btn {
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.admin-dashboard-wrapper .approve-action-btn:hover {
+  background: var(--success-hover);
+}
+
+.admin-dashboard-wrapper .resolve-variant {
+  background: #0284c7; /* Sky 600 Resolve Style Color */
+}
+.admin-dashboard-wrapper .resolve-variant:hover {
+  background: #0369a1;
+}
+
+/* --- Department Internal Layout Chips --- */
+.admin-dashboard-wrapper .scrollable-list-container {
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.admin-dashboard-wrapper .department-chips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-dashboard-wrapper .dept-chip {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-dashboard-wrapper .dept-name {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* --- Corporate Records Data-List Components --- */
+.admin-dashboard-wrapper .data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-dashboard-wrapper .data-list li {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-dashboard-wrapper .data-list li:last-child {
+  margin-bottom: 0;
+}
+
+.admin-dashboard-wrapper .actionable-item {
+  align-items: flex-start !important;
+}
+
+.admin-dashboard-wrapper .list-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.admin-dashboard-wrapper .list-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-dashboard-wrapper .list-title-row strong {
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.admin-dashboard-wrapper .details-text-block {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+.admin-dashboard-wrapper .metadata-tag {
+  font-size: 0.75rem;
+  background: #e2e8f0;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: max-content;
+  font-weight: 500;
+}
+
+/* --- Inline Utilities --- */
+.admin-dashboard-wrapper .text-muted { color: var(--text-muted); line-height: 1.5; }
+.admin-dashboard-wrapper .text-small { margin: 0; }
+.admin-dashboard-wrapper .empty-row {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 20px 0;
+  margin: 0;
+}
+
+/* --- Status Badges Components --- */
+.admin-dashboard-wrapper .status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.admin-dashboard-wrapper .badge-pending {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.admin-dashboard-wrapper .badge-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* --- Breakpoints Media Queries Viewports --- */
+@media (max-width: 992px) {
+  .admin-dashboard-wrapper .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-dashboard-wrapper .navbar {
+    padding: 16px 20px;
+  }
+  .admin-dashboard-wrapper .container {
+    padding: 24px 16px;
+  }
+  .admin-dashboard-wrapper .data-list li {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 14px;
+  }
+  .admin-dashboard-wrapper .approve-action-btn {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,289 @@
+/* ==========================================================================
+   Manager Management Workspace - Standalone Stylesheet
+   ========================================================================== */
+
+.manager-management-wrapper {
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --panel-bg: #ffffff;
+  --primary: #4f46e5; /* Workspace Shared Indigo Primary */
+  --primary-hover: #4338ca;
+  --text-main: #0f172a; /* Dark Slate Core */
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --radius: 12px;
+
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.manager-management-wrapper div,
+.manager-management-wrapper input,
+.manager-management-wrapper select,
+.manager-management-wrapper table,
+.manager-management-wrapper button {
+  box-sizing: border-box;
+}
+
+/* --- Navigation Top Banner Structure --- */
+.manager-management-wrapper .navbar {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
+
+.manager-management-wrapper .navbar .brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.manager-management-wrapper .back-btn {
+  background: #334155;
+  color: #f8fafc;
+  border: 1px solid #475569;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.manager-management-wrapper .back-btn:hover {
+  background: #475569;
+  color: #ffffff;
+}
+
+/* --- Container Core Layout --- */
+.manager-management-wrapper .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.manager-management-wrapper .manager-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* --- Card Bases --- */
+.manager-management-wrapper .card {
+  background: var(--panel-bg);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.manager-management-wrapper .card h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.manager-management-wrapper .card-subtitle {
+  margin: 0 0 24px 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* --- Input Form Framework Elements --- */
+.manager-management-wrapper .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+}
+
+.manager-management-wrapper .input-field-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.manager-management-wrapper .input-field-block label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.manager-management-wrapper .card input,
+.manager-management-wrapper .form-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: #ffffff;
+  color: var(--text-main);
+  font-family: inherit;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.manager-management-wrapper .card input:focus,
+.manager-management-wrapper .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.manager-management-wrapper .submit-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.manager-management-wrapper .submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+.manager-management-wrapper .submit-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* --- Enterprise Data Table Module --- */
+.manager-management-wrapper .table-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.manager-management-wrapper .table-header-row h3 {
+  margin: 0;
+}
+
+.manager-management-wrapper .counter-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.manager-management-wrapper .table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.manager-management-wrapper .custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+  background: #ffffff;
+}
+
+.manager-management-wrapper .custom-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.manager-management-wrapper .custom-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-color);
+  color: #334155;
+  white-space: nowrap;
+}
+
+.manager-management-wrapper .custom-table tr:last-child td {
+  border-bottom: none;
+}
+
+.manager-management-wrapper .custom-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+/* Data Column Utilities inside Matrix Row */
+.manager-management-wrapper .font-medium {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.manager-management-wrapper .text-muted-email {
+  color: var(--text-muted);
+}
+
+.manager-management-wrapper .badge-dept {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+}
+
+.manager-management-wrapper .user-code-tag {
+  font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+  background: #f8fafc;
+  color: #db2777; /* Deep Magenta code key font style */
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: 1px solid #e2e8f0;
+}
+
+.manager-management-wrapper .empty-row {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 32px 18px !important;
+}
+
+/* --- Adaptive Viewports Configuration Breakpoints --- */
+@media (max-width: 1024px) {
+  .manager-management-wrapper .manager-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .manager-management-wrapper .navbar {
+    padding: 16px 20px;
+  }
+  .manager-management-wrapper .container {
+    padding: 24px 16px;
+  }
+}
